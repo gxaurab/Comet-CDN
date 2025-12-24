@@ -20,9 +20,7 @@ async fn main() {
         .unwrap();
 
     let cors = CorsLayer::new()
-        .allow_origin(HeaderValue::from_static("https://hamrofund.org/*"))
-        .allow_origin(HeaderValue::from_static("https://cdn.hamrofund.org/*"))
-        .allow_origin(HeaderValue::from_static("http://localhost:3000/*"))
+        .allow_origin(Any)
         .allow_methods(Any)
         .allow_headers(Any);
 
